@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" preserveAspectRatio="xMidYMid meet">
+  <g transform="translate(30,30)">
+    <!-- Hexagon outline -->
+    <polygon points="100,10 190,55 190,145 100,190 10,145 10,55" fill="none" stroke="#000" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"></polygon>
+             
+    <!-- The symbol </>
+         No space between / -->
+    <text x="100" y="125" text-anchor="middle" font-family="monospace" font-size="60" fill="black">&lt;/&gt;</text>
+  </g>
+</svg>

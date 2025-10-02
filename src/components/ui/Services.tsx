@@ -7,11 +7,12 @@ import fullstack from "@/assets/digital-services.png";
 import mobile from "@/assets/software-development.png";
 
 const containerVariants = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 0, },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2, // each child waits 0.2s before starting
+      staggerChildren: 0.5,
+      stiffness: 50,
     },
   },
 };
@@ -27,7 +28,7 @@ const Services = () => {
         className="text-center "
       >
         <h2 className="text-6xl font-bold text-white mb-12">Services</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-8 px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-4 px-4">
           <GlassIconParent
             icon={
               <GlassIcons
