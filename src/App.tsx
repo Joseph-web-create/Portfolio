@@ -1,4 +1,3 @@
-// import CodeSnipet from "./components/CodeSnipet";
 import "./prism-vscode.css";
 import Orb from "./components/ui/Orb";
 import Nav from "./components/ui/Nav";
@@ -15,7 +14,7 @@ function App() {
           hue={0}
           forceHoverState={true}
         />
-        <div className="absolute top-0 bottom-0 h-[100vh] w-full">
+        <div className="bg-black/50 absolute top-0 bottom-0 h-[100vh] w-full">
           <div className="container mx-auto">
             {/* <CodeSnipet /> */}
 

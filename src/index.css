@@ -175,6 +175,12 @@
   transform-origin: 80% 50%;
 }
 
+.writing-mode-vertical {
+  writing-mode: vertical-rl;
+}
+
+
+
 .icon-btn__icon {
   margin: auto;
   width: 2.9em;
