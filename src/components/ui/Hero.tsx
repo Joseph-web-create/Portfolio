@@ -6,10 +6,26 @@ import { FaChevronDown } from "react-icons/fa6";
 import { BsDashLg } from "react-icons/bs";
 import Shuffle from "@/components/ui/Shuffle";
 import { motion } from "motion/react";
+import ButtonPerent from "./ButtonPerent";
 
 function Hero() {
+  const links = [
+    {
+      href: "https://github.com/Joseph-web-create",
+      icon: <VscGithubInverted />,
+    },
+    {
+      href: "https://www.linkedin.com/in/joseph-thankgod-3b3a08308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      icon: <FaLinkedin />,
+    },
+    {
+      href: "https://x.com/joe__tj?s=21",
+      icon: <BsTwitterX />,
+    },
+  ];
+
   return (
-    <motion.div className="h-[90vh] flex justify-between items-center px-4">
+    <motion.div className="h-[95vh] flex justify-between items-center px-4">
       <motion.div
         initial={{ opacity: 0, x: -220 }}
         whileInView={{
@@ -22,28 +38,17 @@ function Hero() {
         <div className="flex flex-col justify-between h-[90vh] py-6 bg-transparent">
           <div />
           <div className="flex flex-col gap-10">
-            <a
-              href="https://github.com/Joseph-web-create"
-              target="_blank"
-              className="hover:text-gray-400 active:text-gray-400 text-white"
-            >
-              <VscGithubInverted size={30} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/joseph-thankgod-3b3a08308?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8qiVkaRKRd6ZI3dDnSDmOA%3D%3D"
-              target="_blank"
-              className="hover:text-gray-400 active:text-gray-400 text-white"
-            >
-              <FaLinkedin size={30} />
-            </a>
-
-            <a
-              href="https://x.com/joe__tj?s=21"
-              target="_blank"
-              className="hover:text-gray-400 active:text-gray-400 text-white"
-            >
-              <BsTwitterX size={30} />
-            </a>
+            {links.map((data) => (
+              <a
+                key={data.href}
+                href={data.href}
+                rel="noopener noreferrer"
+                target="_blank"
+                className="text-2xl  hover:text-gray-400 active:text-gray-400 text-white"
+              >
+                {data.icon}
+              </a>
+            ))}
           </div>
 
           <div className="flex flex-col items-center gap-2">
@@ -52,14 +57,14 @@ function Hero() {
           </div>
         </div>
 
-        <div className="flex flex-col -mt-28">
-          <div className="flex items-center ">
-            <BsDashLg color="white" size={60} />
+        <div className="flex flex-col -mt-14">
+          <div className="flex items-center">
+            <BsDashLg color="white" className="text-2xl lg:text-4xl" />
             <p className="text-white">Hello</p>
           </div>
           <div className="lg:ml-14 space-y-2">
             <div className="flex flex-col gap-2 ">
-              <h2 className="text-gray-400 text-3xl lg:text-7xl mb-2">I'm,</h2>
+              <h2 className="text-gray-400 text-2xl lg:text-7xl mb-2">I'm,</h2>
               <Shuffle
                 text="Joseph ThankGod"
                 shuffleDirection="right"
@@ -73,7 +78,7 @@ function Hero() {
                 triggerOnHover={true}
                 respectReducedMotion={true}
                 // style={{ color: "#fff" }}
-                className="text-1xl lg:text-4xl text-white"
+                className="text-base lg:text-4xl text-white -ml-12 lg:ml-0"
                 onShuffleComplete={undefined}
                 colorFrom={undefined}
                 colorTo={undefined}
@@ -82,6 +87,7 @@ function Hero() {
             <p className="text-gray-400 text-base">
               A full stack developer based in Lagos
             </p>
+            <ButtonPerent />
           </div>
         </div>
       </motion.div>

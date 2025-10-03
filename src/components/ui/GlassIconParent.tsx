@@ -20,7 +20,7 @@ const GlassIconParent = ({
 }) => {
   return (
     <motion.div
-      className="text-center bg-[#2b2a29] flex flex-col items-center justify-center rounded-lg py-10 h-auto gap-4"
+      className="text-center bg-[#1f1e1e] [background-image:radial-gradient(circle_at_center,rgba(250,250,250,0.15),transparent_30%)] flex flex-col items-center justify-center rounded-lg py-10 h-auto gap-4"
       variants={cardVariants}
       whileHover={{ scale: 0.95 }}
       whileTap={{ scale: 0.95 }}

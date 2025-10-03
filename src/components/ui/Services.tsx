@@ -7,7 +7,7 @@ import fullstack from "@/assets/digital-services.png";
 import mobile from "@/assets/software-development.png";
 
 const containerVariants = {
-  hidden: { opacity: 0, },
+  hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
@@ -42,7 +42,7 @@ const Services = () => {
           <GlassIconParent
             icon={
               <GlassIcons
-                icon={<img src={backend} alt="Front-End" />}
+                icon={<img src={backend} alt="Back-End" />}
                 bg="bg-[#10B981]"
               />
             }
@@ -52,7 +52,7 @@ const Services = () => {
           <GlassIconParent
             icon={
               <GlassIcons
-                icon={<img src={fullstack} alt="Front-End" />}
+                icon={<img src={fullstack} alt="Full Stack dev" />}
                 bg="bg-[#F59E0B]"
               />
             }
@@ -62,7 +62,7 @@ const Services = () => {
           <GlassIconParent
             icon={
               <GlassIcons
-                icon={<img src={mobile} alt="Front-End" />}
+                icon={<img src={mobile} alt="Mobile dev" />}
                 bg="bg-[#8B5CF6]"
               />
             }

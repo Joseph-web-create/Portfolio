@@ -18,6 +18,7 @@
   --background-color: #1a1a1a;
   --border: oklch(0.922 0 0);
   --minor: #E0CFC3;
+  --bg-Linear: linear-gradient(90deg, rgba(92, 92, 92, 1) 0%, rgba(0, 0, 0, 1) 0%, rgba(176, 176, 176, 1) 50%, rgba(0, 0, 0, 1) 100%);
   background-color: #000;
 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
