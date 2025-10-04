@@ -26,6 +26,7 @@ const Services = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         className="text-center "
+        id="service"
       >
         <h2 className="text-6xl font-bold text-white mb-12">Services</h2>
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-4 px-4">

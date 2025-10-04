@@ -14,6 +14,12 @@
 
 }
 
+
+
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --background-color: #1a1a1a;
   --border: oklch(0.922 0 0);
