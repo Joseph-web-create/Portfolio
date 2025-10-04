@@ -57,14 +57,14 @@ function Hero() {
           </div>
         </div>
 
-        <div className="flex flex-col -mt-14">
-          <div className="flex items-center">
-            <BsDashLg color="white" className="text-2xl lg:text-4xl" />
+        <div className="flex flex-col -mt-22 lg:-m-0">
+          <div className="lg:flex items-center hidden">
+            <BsDashLg color="white" className="text-2xl lg:text-4xl -mt-1" />
             <p className="text-white">Hello</p>
           </div>
-          <div className="lg:ml-14 space-y-2">
+          <div className="lg:ml-8 space-y-2">
             <div className="flex flex-col gap-2 ">
-              <h2 className="text-gray-400 text-2xl lg:text-7xl mb-2">I'm,</h2>
+              <h2 className="text-gray-400 text-2xl lg:text-7xl mb-2 ">I'm,</h2>
               <Shuffle
                 text="Joseph ThankGod"
                 shuffleDirection="right"
@@ -78,15 +78,21 @@ function Hero() {
                 triggerOnHover={true}
                 respectReducedMotion={true}
                 // style={{ color: "#fff" }}
-                className="text-base lg:text-4xl text-white -ml-12 lg:ml-0"
+                className="text-base lg:text-4xl text-white/96 -ml-3  lg:ml-0"
                 onShuffleComplete={undefined}
                 colorFrom={undefined}
                 colorTo={undefined}
               />
             </div>
-            <p className="text-gray-400 text-base">
+            <p className="text-gray-400 text-[14px] lg:text-base ">
               A full stack developer based in Lagos
             </p>
+            <div className="flex items-center gap-2">
+              <div className="bg-green-400 rounded-full p-[5px]" />
+              <p className="text-gray-400 text-[14px] lg:text-base">
+                Available for new project
+              </p>
+            </div>
             <ButtonPerent />
           </div>
         </div>
