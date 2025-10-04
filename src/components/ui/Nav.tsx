@@ -9,14 +9,14 @@ function Nav() {
       </div>
 
       <div className="fixed top-0 lg:block container mt-12 hidden ">
-        <div className="flex items-center w-[90%] mx-auto justify-between bg-black/70 py-2 px-8 rounded-full border border-gray-800">
+        <div className="flex items-center w-[90%] mx-auto justify-between py-2 px-8 rounded-full border border-gray-700/95">
           <a href="#">
             <Logo className="w-12 h-12" />
           </a>
-          <div className="flex items-center gap-4 text-white">
+          <div className="flex items-center gap-4 shiny-text">
             <p>About</p>
             <p>Projects</p>
-            <a href="#service">Service</a>
+            <a href="#service" className="hover:text-white">Service</a>
             <p>Contact</p>
           </div>
         </div>

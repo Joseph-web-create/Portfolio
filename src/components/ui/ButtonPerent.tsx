@@ -15,11 +15,12 @@ const ButtonPerent = () => {
           <PiReadCvLogoFill />
         </div>
       </a>
+
       <a
         href="https://wa.me/message/W22DLFJNNKRQG1"
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-[#000000] hover:bg-[#252222] text-white py-2 flex px-4 items-center gap-2 rounded-xl font-bold text-[12px]"
+        className="bg-[#000000] hover:bg-[#252222] text-white py-2 flex px-4 items-center gap-2 rounded-xl font-bold text-[12px] shiny-text"
       >
         Start Chat
         <div className="text-green-400 rounded-full  text-2xl">
