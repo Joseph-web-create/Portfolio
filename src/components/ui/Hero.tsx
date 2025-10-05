@@ -13,14 +13,17 @@ function Hero() {
     {
       href: "https://github.com/Joseph-web-create",
       icon: <VscGithubInverted />,
+      bg: "bgGithub",
     },
     {
       href: "https://www.linkedin.com/in/joseph-thankgod-3b3a08308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       icon: <FaLinkedin />,
+      bg: "bgLink",
     },
     {
       href: "https://x.com/joe__tj?s=21",
       icon: <BsTwitterX />,
+      bg: "bgX",
     },
   ];
 
@@ -44,9 +47,10 @@ function Hero() {
                 href={data.href}
                 rel="noopener noreferrer"
                 target="_blank"
-                className="text-2xl  hover:text-gray-400 active:text-gray-400 text-white"
+                className="text-2xl text-white Btn p-2"
               >
-                {data.icon}
+                <span className="svgContainer relative z-10">{data.icon}</span>
+                <span className={`${data.bg}`}></span>
               </a>
             ))}
           </div>
@@ -57,7 +61,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className="flex flex-col -mt-22 lg:-m-0">
+        <div className="flex flex-col -mt-28 lg:-mt-5">
           <div className="lg:flex items-center hidden">
             <BsDashLg color="white" className="text-2xl lg:text-4xl -mt-1" />
             <p className="text-white">Hello</p>

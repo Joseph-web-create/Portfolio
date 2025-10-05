@@ -389,8 +389,6 @@ img {
 }
 
 
-
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -399,4 +397,174 @@ img {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+
+.loader-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2em;
+  font-weight: 300;
+  color: white;
+  border-radius: 50%;
+  background-color: transparent;
+  user-select: none;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: transparent;
+  animation: loader-rotate 2s linear infinite;
+  z-index: 0;
+}
+
+@keyframes loader-rotate {
+  0% {
+    transform: rotate(90deg);
+    box-shadow:
+      0 10px 20px 0 #fff inset,
+      0 20px 30px 0 #ad5fff inset,
+      0 60px 60px 0 #471eec inset;
+  }
+
+  50% {
+    transform: rotate(270deg);
+    box-shadow:
+      0 10px 20px 0 #fff inset,
+      0 20px 10px 0 #d60a47 inset,
+      0 40px 60px 0 #311e80 inset;
+  }
+
+  100% {
+    transform: rotate(450deg);
+    box-shadow:
+      0 10px 20px 0 #fff inset,
+      0 20px 30px 0 #ad5fff inset,
+      0 60px 60px 0 #471eec inset;
+  }
+}
+
+
+@keyframes loader-letter-anim {
+
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: translateY(0);
+  }
+
+  20% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+
+  40% {
+    opacity: 0.7;
+    transform: translateY(0);
+  }
+}
+
+.Btn {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(4px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all .3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.bgLink {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #0077b5;
+  background: -moz-linear-gradient(45deg, #0077b5 0%, #0a66c2 50%, #004182 100%);
+  background: -webkit-linear-gradient(45deg, #0077b5 0%, #0a66c2 50%, #004182 100%);
+  background: linear-gradient(45deg, #0077b5 0%, #0a66c2 50%, #004182 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0077b5', endColorstr='#004182', GradientType=1);
+  border-radius: 9px;
+  pointer-events: none;
+  transition: all .3s;
+}
+
+.bgX {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  background: -moz-linear-gradient(45deg, #000000 0%, #1a1a1a 50%, #555555 100%);
+  background: -webkit-linear-gradient(45deg, #000000 0%, #1a1a1a 50%, #555555 100%);
+  background: linear-gradient(45deg, #000000 0%, #1a1a1a 50%, #555555 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#555555', GradientType=1);
+  border-radius: 9px;
+  pointer-events: none;
+  transition: all .3s;
+}
+
+.bgGithub {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #2b2b2b;
+  background: -moz-linear-gradient(45deg, #2b2b2b 0%, #3c3c3c 50%, #5a5a5a 100%);
+  background: -webkit-linear-gradient(45deg, #2b2b2b 0%, #3c3c3c 50%, #5a5a5a 100%);
+  background: linear-gradient(45deg, #2b2b2b 0%, #3c3c3c 50%, #5a5a5a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2b2b2b', endColorstr='#5a5a5a', GradientType=1);
+  border-radius: 9px;
+  pointer-events: none;
+  transition: all .3s;
+}
+
+
+
+.Btn:hover .bgGithub {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.Btn:hover .bgLink {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.Btn:hover .bgX {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.Btn:hover .svgContainer {
+  background-color: rgba(156, 156, 156, 0.466);
 }
