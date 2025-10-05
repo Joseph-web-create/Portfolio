@@ -27,7 +27,7 @@ function Hero() {
   return (
     <motion.div className="h-[95vh] flex justify-between items-center px-4">
       <motion.div
-        initial={{ opacity: 0, x: -220 }}
+        initial={{ opacity: 0, x: -100 }}
         whileInView={{
           opacity: 1,
           x: 0,
@@ -99,7 +99,7 @@ function Hero() {
       </motion.div>
 
       <motion.img
-        initial={{ opacity: 0, x: 220 }}
+        initial={{ opacity: 0, x: 100 }}
         whileInView={{
           opacity: 1,
           x: 0,

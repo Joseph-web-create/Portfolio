@@ -1,11 +1,40 @@
+import { motion, type Variants } from "motion/react";
 import profileImage from "@/assets/joseph.jfif";
 import LoopLogo from "./LoopLogo";
-import CurvedLoop from "./CurvedLoop";
+
+const variants: Variants | undefined = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      stiffness: 50,
+    },
+  },
+};
 
 const About = () => {
   return (
-    <div className="px-4 my-14">
-      <div className="flex flex-col gap-10 lg:gap-0 justify-around lg:flex-row">
+    <motion.div
+      className="px-4 my-14"
+      variants={containerVariants}
+      viewport={{ once: true }}
+    >
+      <motion.div
+        className="flex flex-col gap-10 lg:gap-0 justify-around lg:flex-row"
+        initial="hidden"
+        whileInView="visible"
+        variants={variants}
+      >
         <img
           src={profileImage}
           alt="Joseph"
@@ -32,12 +61,17 @@ const About = () => {
             job.
           </blockquote>
         </div>
-      </div>
-      <div className="space-y-10 mt-20">
+      </motion.div>
+      <motion.div
+        className="space-y-10 mt-20"
+        initial="hidden"
+        whileInView="visible"
+        variants={variants}
+      >
         <h3 className="text-white text-center text-4xl">Skills</h3>
         <LoopLogo />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
