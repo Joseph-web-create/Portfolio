@@ -22,7 +22,7 @@ const Services = () => {
     {
       icon: (
         <GlassIcons
-          icon={<img src={frontEnd} alt="Front-End" />}
+          icon={<img src={frontEnd} alt="Front-End" className="w-9" />}
           bg="bg-[#3B82F6]"
         />
       ),
@@ -32,7 +32,7 @@ const Services = () => {
     {
       icon: (
         <GlassIcons
-          icon={<img src={backend} alt="Back-End" />}
+          icon={<img src={backend} alt="Back-End" className="w-9" />}
           bg="bg-[#10B981]"
         />
       ),
@@ -42,7 +42,7 @@ const Services = () => {
     {
       icon: (
         <GlassIcons
-          icon={<img src={fullstack} alt="Full Stack dev" />}
+          icon={<img src={fullstack} alt="Full Stack dev" className="w-9" />}
           bg="bg-[#F59E0B]"
         />
       ),
@@ -52,7 +52,7 @@ const Services = () => {
     {
       icon: (
         <GlassIcons
-          icon={<img src={mobile} alt="Mobile dev" />}
+          icon={<img src={mobile} alt="Mobile dev" className="w-9" />}
           bg="bg-[#8B5CF6]"
         />
       ),

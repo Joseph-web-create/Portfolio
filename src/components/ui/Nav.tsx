@@ -14,10 +14,18 @@ function Nav() {
             <Logo className="w-12 h-12" />
           </a>
           <div className="flex items-center gap-4 shiny-text">
-            <p>About</p>
-            <p>Projects</p>
-            <a href="#service" className="hover:text-white">Service</a>
-            <p>Contact</p>
+            <a href="#about" className="hover:text-white">
+              About
+            </a>
+            <a href="#projects" className="hover:text-white">
+              Projects
+            </a>
+            <a href="#service" className="hover:text-white">
+              Service
+            </a>
+            <a href="#contact" className="hover:text-white">
+              Contact
+            </a>
           </div>
         </div>
       </div>

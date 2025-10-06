@@ -28,6 +28,7 @@ const About = () => {
       className="px-4 my-14"
       variants={containerVariants}
       viewport={{ once: true }}
+      id="about"
     >
       <motion.div
         className="flex flex-col gap-10 lg:gap-0 justify-around lg:flex-row"

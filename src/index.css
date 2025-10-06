@@ -147,8 +147,8 @@ img {
   background-color: transparent;
   outline: none;
   position: relative;
-  width: 4.5em;
-  height: 4.5em;
+  width: 4em;
+  height: 4em;
   perspective: 24em;
   transform-style: preserve-3d;
   -webkit-tap-highlight-color: transparent;
