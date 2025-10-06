@@ -4,6 +4,7 @@ import Hero from "./ui/Hero";
 import About from "./ui/About";
 import Services from "./ui/Services";
 import Orb from "./ui/Orb";
+import Project from "./ui/Project";
 
 const Index = () => {
   return (
@@ -27,7 +28,10 @@ const Index = () => {
               <Nav />
               <Hero />
               <About />
-              <Services />
+              <div className="flex flex-col gap-26">
+                <Services />
+                <Project />
+              </div>
             </ClickSpark>
           </div>
         </div>

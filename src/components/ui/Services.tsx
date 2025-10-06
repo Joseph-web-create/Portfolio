@@ -67,12 +67,10 @@ const Services = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
-        className="text-center "
+        className="text-center min-h-[50vh] grid gap-10 items-center"
         id="service"
       >
-        <h2 className="text-4xl lg:text-6xl font-bold text-white mb-12">
-          Services
-        </h2>
+        <h2 className="text-4xl lg:text-5xl font-bold text-white ">Services</h2>
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-4 px-4">
           {service.map((service) => (
             <GlassIconParent
