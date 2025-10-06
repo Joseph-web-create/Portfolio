@@ -29,8 +29,8 @@ const Index = () => {
               <Hero />
               <About />
               <div className="flex flex-col gap-26">
-                <Services />
                 <Project />
+                <Services />
               </div>
             </ClickSpark>
           </div>

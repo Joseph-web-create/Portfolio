@@ -71,7 +71,7 @@ const Services = () => {
         id="service"
       >
         <h2 className="text-4xl lg:text-5xl font-bold text-white ">Services</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-4 px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 px-4">
           {service.map((service) => (
             <GlassIconParent
               key={service.title}

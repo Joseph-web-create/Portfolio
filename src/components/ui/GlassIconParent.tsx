@@ -21,14 +21,14 @@ const GlassIconParent = ({
   return (
     <>
       <motion.div
-        className="text-center bg-[#1b1b1b] [background-image:radial-gradient(circle_at_center,rgba(250,250,250,0.15),transparent_30%)] flex flex-col items-center justify-center rounded-lg py-10 h-auto gap-4 "
+        className="text-center  bg-[#1b1b1b] flex flex-col items-center justify-center rounded-lg py-14 h-auto shadow-xl/30 shadow-[#555555] "
         variants={variants}
-        whileHover={{ scale: 0.95 }}
-        whileTap={{ scale: 0.95 }}
+        whileHover={{ scale: 1.03 }}
+        whileTap={{ scale: 1.03 }}
       >
         {icon}
         <h2 className="text-white/90 text-2xl my-2">{title}</h2>
-        <p className="text-[#747474] text-base">{pTag}</p>
+        <p className="text-[#949393] text-base">{pTag}</p>
       </motion.div>
     </>
   );

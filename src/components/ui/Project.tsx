@@ -1,22 +1,39 @@
 import Instagram from "@/assets/instagram.svg?react";
 import ProjectCard from "./ProjectCard";
-import Home from "@/assets/home-button.svg?react";
+import BH from "@/assets/BH.svg?react";
+import { motion } from "motion/react";
+import Neumock from "@/assets/neumock-logo.svg?react";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.5,
+      stiffness: 50,
+    },
+  },
+};
 
 const Project = () => {
   return (
-    <div
-      className="min-h-[50vh]  px-4 grid gap-10  items-center "
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.3 }}
+      className="min-h-[50vh] px-4 grid lg:gap-0 gap-10 items-center"
       id="projects"
     >
       <h2 className="text-4xl lg:text-5xl font-bold text-white text-center ">
         Projects
       </h2>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 ">
         <ProjectCard
           Instagram={Instagram}
           title="Instagram clone"
-          stack="Full stack"
+          role="Fullstack Developer"
           list={[
             `Built a social platform with authentication, media uploads,
                 likes, and comments`,
@@ -25,29 +42,27 @@ const Project = () => {
           tectStacks={["React", "Node js", "MongoDB"]}
         />
         <ProjectCard
-          Instagram={Home}
-          title="House Rental service"
-          stack="Full stack"
+          Instagram={Neumock}
+          title="Current Project (API Integration & Authentication)"
+          role="Frontend Developer"
           list={[
-            `Built a social platform with authentication, media uploads,
-                likes, and comments`,
-            `Enabled 100+ test users to interact in real time`,
+            `Implemented secure authentication with Google sign-in and social login flows, handling token-based access and protected routes.`,
+            `Integrating backend APIs into the frontend, ensuring smooth data flow and responsive UI for core features.`,
           ]}
-          tectStacks={["React", "Node js", "MongoDB"]}
+          tectStacks={["React", "API Integration", "Google Oauth"]}
         />
         <ProjectCard
-          Instagram={Instagram}
-          title="Instagram clone"
-          stack="Full stack"
+          Instagram={BH}
+          title="Real Estate Marketplace"
+          role="Frontend Developer"
           list={[
-            `Built a social platform with authentication, media uploads,
-                likes, and comments`,
-            `Enabled 100+ test users to interact in real time`,
+            `Built the frontend for a real estate platform where users can browse, search, and filter houses for sale.`,
+            `Integrated APIs for property listings and authentication, delivering a fast, responsive UI across desktop and mobile`,
           ]}
-          tectStacks={["React", "Node js", "MongoDB"]}
+          tectStacks={["React", "TailwindCSS", "API Integration"]}
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 
