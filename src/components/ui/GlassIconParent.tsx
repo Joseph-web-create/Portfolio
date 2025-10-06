@@ -21,7 +21,7 @@ const GlassIconParent = ({
   return (
     <>
       <motion.div
-        className="text-center  bg-[#1b1b1b] flex flex-col items-center justify-center rounded-lg py-14 h-auto shadow-xl/30 shadow-[#555555] "
+        className="text-center  bg-[#1b1b1b] flex flex-col items-center  rounded-lg py-14 mt-8 shadow-xl/30 shadow-[#555555] "
         variants={variants}
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 1.03 }}

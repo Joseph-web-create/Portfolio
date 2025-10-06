@@ -25,7 +25,7 @@ const containerVariants = {
 const About = () => {
   return (
     <motion.div
-      className="px-4 my-14"
+      className="px-4 my-14 flex flex-col gap-30"
       variants={containerVariants}
       viewport={{ once: true }}
       id="about"
@@ -51,10 +51,9 @@ const About = () => {
               nonsense, just results.
             </h2>
             <p className="text-white/80">
-              Web and mobile developer obsessed with clean architecture and
-              smooth user experiences. When I’m not pushing commits, I’m either
-              studying new tech trends, buried in a book, or trying not to lose
-              at chess.
+              Web and mobile developer obsessed with clean code and smooth user
+              experiences. When I’m not pushing commits, I’m either studying new
+              tech trends, buried in a book, or trying not to lose at chess.
             </p>
           </div>
           <blockquote className="text-white italic">
@@ -64,7 +63,7 @@ const About = () => {
         </div>
       </motion.div>
       <motion.div
-        className="space-y-10 mt-20"
+        className="space-y-10"
         initial="hidden"
         whileInView="visible"
         variants={variants}

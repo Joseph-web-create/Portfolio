@@ -1,21 +1,10 @@
-import { motion } from "motion/react";
 import GlassIconParent from "./GlassIconParent";
 import GlassIcons from "./GlassIcons";
 import frontEnd from "@/assets/frontEnd.png";
 import backend from "@/assets/backend.png";
 import fullstack from "@/assets/digital-services.png";
 import mobile from "@/assets/software-development.png";
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.5,
-      stiffness: 50,
-    },
-  },
-};
+import AppWrapper from "./AppWrapper";
 
 const Services = () => {
   const service = [
@@ -62,16 +51,11 @@ const Services = () => {
   ];
   return (
     <>
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
-        className="text-center min-h-[50vh] grid gap-10 items-center"
-        id="service"
-      >
-        <h2 className="text-4xl lg:text-5xl font-bold text-white ">Services</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 px-4">
+      <AppWrapper id="service">
+        <h2 className="text-4xl lg:text-5xl font-bold text-white text-center ">
+          Services
+        </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {service.map((service) => (
             <GlassIconParent
               key={service.title}
@@ -81,7 +65,7 @@ const Services = () => {
             />
           ))}
         </div>
-      </motion.div>
+      </AppWrapper>
     </>
   );
 };

@@ -1,5 +1,5 @@
 import type { ElementType } from "react";
-import { motion } from "motion/react";
+import { motion, type Variants } from "motion/react";
 
 const variants: Variants | undefined = {
   hidden: { opacity: 0, y: 40 },
