@@ -12,7 +12,7 @@ const containerVariants = {
 };
 const AppWrapper = ({ children, id }: { children: ReactNode; id: string }) => {
   return (
-    <motion.div
+    <motion.section
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -21,7 +21,7 @@ const AppWrapper = ({ children, id }: { children: ReactNode; id: string }) => {
       id={id}
     >
       {children}
-    </motion.div>
+    </motion.section>
   );
 };
 

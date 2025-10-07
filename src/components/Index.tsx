@@ -9,7 +9,7 @@ import Project from "./ui/Project";
 const Index = () => {
   return (
     <>
-      <div className="bg-black relative h-[100vh] w-full">
+      <section className="bg-black relative h-[100vh] w-full">
         <Orb
           hoverIntensity={0.5}
           rotateOnHover={true}
@@ -35,7 +35,7 @@ const Index = () => {
             </ClickSpark>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

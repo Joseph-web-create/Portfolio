@@ -3,7 +3,7 @@ import GlassIcons from "./GlassIcons";
 import frontEnd from "@/assets/frontEnd.png";
 import backend from "@/assets/backend.png";
 import fullstack from "@/assets/digital-services.png";
-import mobile from "@/assets/software-development.png";
+// import mobile from "@/assets/software-development.png";
 import AppWrapper from "./AppWrapper";
 
 const Services = () => {
@@ -38,16 +38,16 @@ const Services = () => {
       title: "Full-Stack Web Applications",
       pTag: "From the buttons you click to the server that saves your data, I put it all together.",
     },
-    {
-      icon: (
-        <GlassIcons
-          icon={<img src={mobile} alt="Mobile dev" className="w-9" />}
-          bg="bg-[#8B5CF6]"
-        />
-      ),
-      title: "Mobile Development",
-      pTag: "I create apps that run on both iOS and Android with a single codebase.",
-    },
+    // {
+    //   icon: (
+    //     <GlassIcons
+    //       icon={<img src={mobile} alt="Mobile dev" className="w-9" />}
+    //       bg="bg-[#8B5CF6]"
+    //     />
+    //   ),
+    //   title: "Mobile Development",
+    //   pTag: "I create apps that run on both iOS and Android with a single codebase.",
+    // },
   ];
   return (
     <>

@@ -24,7 +24,7 @@ const containerVariants = {
 
 const About = () => {
   return (
-    <motion.div
+    <motion.section
       className="px-4 my-14 flex flex-col gap-30"
       variants={containerVariants}
       viewport={{ once: true }}
@@ -73,7 +73,7 @@ const About = () => {
         </h3>
         <LoopLogo />
       </motion.div>
-    </motion.div>
+    </motion.section>
   );
 };
 

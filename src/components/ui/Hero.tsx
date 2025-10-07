@@ -28,7 +28,7 @@ function Hero() {
   ];
 
   return (
-    <motion.div className="h-[95vh] flex justify-between items-center px-4">
+    <motion.section className="h-[95vh] flex justify-between items-center px-4">
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         whileInView={{
@@ -113,7 +113,7 @@ function Hero() {
         alt="Joseph"
         className="w-[40%] object-cover hidden lg:block"
       />
-    </motion.div>
+    </motion.section>
   );
 }
 

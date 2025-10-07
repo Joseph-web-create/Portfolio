@@ -1,7 +1,7 @@
 import { BiLogoPostgresql } from "react-icons/bi";
 import {
   SiReact,
-  SiNextdotjs,
+  // SiNextdotjs,
   SiTypescript,
   SiTailwindcss,
   SiMongodb,
@@ -18,10 +18,10 @@ export const techLogos = [
     node: <SiReact color="#61DBFB" />,
     title: "React",
   },
-  {
-    node: <SiNextdotjs color="#ffffff" />,
-    title: "Next.js",
-  },
+  // {
+  //   node: <SiNextdotjs color="#ffffff" />,
+  //   title: "Next.js",
+  // },
   {
     node: <SiJavascript color="#F7DF1E" />,
     title: "Javascript",
