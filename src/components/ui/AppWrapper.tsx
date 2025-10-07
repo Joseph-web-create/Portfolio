@@ -16,7 +16,7 @@ const AppWrapper = ({ children, id }: { children: ReactNode; id: string }) => {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.3 }}
       className="min-h-[50vh] grid gap-10 items-center px-4"
       id={id}
     >

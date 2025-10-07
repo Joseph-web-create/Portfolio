@@ -28,7 +28,7 @@ const Index = () => {
               <Nav />
               <Hero />
               <About />
-              <div className="flex flex-col lg:gap-26">
+              <div className="flex flex-col gap-26">
                 <Project />
                 <Services />
               </div>
