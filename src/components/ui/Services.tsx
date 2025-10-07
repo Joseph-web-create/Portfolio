@@ -55,7 +55,7 @@ const Services = () => {
         <h2 className="text-4xl lg:text-5xl font-bold text-white text-center ">
           Services
         </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 ">
           {service.map((service) => (
             <GlassIconParent
               key={service.title}

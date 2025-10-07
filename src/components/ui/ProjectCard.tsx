@@ -28,7 +28,7 @@ const ProjectCard = ({
       variants={variants}
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 1.03 }}
-      className="bg-[#1b1b1b] shadow-xl/30 shadow-[#555555] rounded-lg px-4 py-6 flex flex-col justify-between gap-4"
+      className="bg-[#1b1b1b] shadow-xl/30 hover:shadow-[#555555] rounded-lg px-4 py-6 flex flex-col justify-between gap-4"
     >
       <div className="flex items-center gap-4">
         <Instagram className="w-18 h-14 lg:h-18" />
