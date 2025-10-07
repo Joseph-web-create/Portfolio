@@ -24,6 +24,7 @@ const Project = () => {
             tectStacks={["React", "Express js", "Node js", "MongoDB"]}
             link="https://instagram-clone-mu-ten.vercel.app/auth/login"
             date="Feb 2025 – May 2025"
+            codeLink="https://github.com/Joseph-web-create/Instagram-clone"
           />
           <ProjectCard
             Icon={Neumock}
