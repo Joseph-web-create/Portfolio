@@ -1,4 +1,5 @@
 import { techLogos } from "@/const/icon";
+
 import LogoLoop from "./LogoLoop";
 
 const LoopLogo = () => {

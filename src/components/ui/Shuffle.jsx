@@ -1,35 +1,35 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { SplitText as GSAPSplitText } from 'gsap/SplitText';
-import { useGSAP } from '@gsap/react';
+import React, { useRef, useEffect, useState } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText as GSAPSplitText } from "gsap/SplitText";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger, GSAPSplitText, useGSAP);
 
 const Shuffle = ({
   text,
-  className = '',
+  className = "",
   style = {},
-  shuffleDirection = 'right',
+  shuffleDirection = "right",
   duration = 0.35,
   maxDelay = 0,
-  ease = 'power3.out',
+  ease = "power3.out",
   threshold = 0.1,
-  rootMargin = '-100px',
-  tag = 'p',
-  textAlign = 'center',
+  rootMargin = "-100px",
+  tag = "p",
+  textAlign = "center",
   onShuffleComplete,
   shuffleTimes = 1,
-  animationMode = 'evenodd',
+  animationMode = "evenodd",
   loop = false,
   loopDelay = 0,
   stagger = 0.03,
-  scrambleCharset = '',
+  scrambleCharset = "",
   colorFrom,
   colorTo,
   triggerOnce = true,
   respectReducedMotion = true,
-  triggerOnHover = true
+  triggerOnHover = true,
 }) => {
   const ref = useRef(null);
   const [fontsLoaded, setFontsLoaded] = useState(false);
@@ -42,8 +42,8 @@ const Shuffle = ({
   const hoverHandlerRef = useRef(null);
 
   useEffect(() => {
-    if ('fonts' in document) {
-      if (document.fonts.status === 'loaded') setFontsLoaded(true);
+    if ("fonts" in document) {
+      if (document.fonts.status === "loaded") setFontsLoaded(true);
       else document.fonts.ready.then(() => setFontsLoaded(true));
     } else setFontsLoaded(true);
   }, []);
@@ -51,7 +51,11 @@ const Shuffle = ({
   useGSAP(
     () => {
       if (!ref.current || !text || !fontsLoaded) return;
-      if (respectReducedMotion && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      if (
+        respectReducedMotion &&
+        window.matchMedia &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      ) {
         onShuffleComplete?.();
         return;
       }
@@ -59,15 +63,19 @@ const Shuffle = ({
       const el = ref.current;
 
       const startPct = (1 - threshold) * 100;
-      const mm = /^(-?\d+(?:\.\d+)?)(px|em|rem|%)?$/.exec(rootMargin || '');
+      const mm = /^(-?\d+(?:\.\d+)?)(px|em|rem|%)?$/.exec(rootMargin || "");
       const mv = mm ? parseFloat(mm[1]) : 0;
-      const mu = mm ? mm[2] || 'px' : 'px';
-      const sign = mv === 0 ? '' : mv < 0 ? `-=${Math.abs(mv)}${mu}` : `+=${mv}${mu}`;
+      const mu = mm ? mm[2] || "px" : "px";
+      const sign =
+        mv === 0 ? "" : mv < 0 ? `-=${Math.abs(mv)}${mu}` : `+=${mv}${mu}`;
       const start = `top ${startPct}%${sign}`;
 
       const removeHover = () => {
         if (hoverHandlerRef.current && ref.current) {
-          ref.current.removeEventListener('mouseenter', hoverHandlerRef.current);
+          ref.current.removeEventListener(
+            "mouseenter",
+            hoverHandlerRef.current
+          );
           hoverHandlerRef.current = null;
         }
       };
@@ -78,10 +86,11 @@ const Shuffle = ({
           tlRef.current = null;
         }
         if (wrappersRef.current.length) {
-          wrappersRef.current.forEach(wrap => {
+          wrappersRef.current.forEach((wrap) => {
             const inner = wrap.firstElementChild;
             const orig = inner?.querySelector('[data-orig="1"]');
-            if (orig && wrap.parentNode) wrap.parentNode.replaceChild(orig, wrap);
+            if (orig && wrap.parentNode)
+              wrap.parentNode.replaceChild(orig, wrap);
           });
           wrappersRef.current = [];
         }
@@ -98,56 +107,69 @@ const Shuffle = ({
         teardown();
 
         splitRef.current = new GSAPSplitText(el, {
-          type: 'chars',
-          charsClass: 'shuffle-char',
-          wordsClass: 'shuffle-word',
-          linesClass: 'shuffle-line',
+          type: "chars",
+          charsClass: "shuffle-char",
+          wordsClass: "shuffle-word",
+          linesClass: "shuffle-line",
           smartWrap: true,
-          reduceWhiteSpace: false
+          reduceWhiteSpace: false,
         });
 
         const chars = splitRef.current.chars || [];
         wrappersRef.current = [];
 
         const rolls = Math.max(1, Math.floor(shuffleTimes));
-        const rand = set => set.charAt(Math.floor(Math.random() * set.length)) || '';
+        const rand = (set) =>
+          set.charAt(Math.floor(Math.random() * set.length)) || "";
 
-        chars.forEach(ch => {
+        chars.forEach((ch) => {
           const parent = ch.parentElement;
           if (!parent) return;
 
           const w = ch.getBoundingClientRect().width;
           if (!w) return;
 
-          const wrap = document.createElement('span');
+          const wrap = document.createElement("span");
           Object.assign(wrap.style, {
-            display: 'inline-block',
-            overflow: 'hidden',
-            width: w + 'px',
-            verticalAlign: 'baseline'
+            display: "inline-block",
+            overflow: "hidden",
+            width: w + "px",
+            verticalAlign: "baseline",
           });
 
-          const inner = document.createElement('span');
+          const inner = document.createElement("span");
           Object.assign(inner.style, {
-            display: 'inline-block',
-            whiteSpace: 'nowrap',
-            willChange: 'transform'
+            display: "inline-block",
+            whiteSpace: "nowrap",
+            willChange: "transform",
           });
 
           parent.insertBefore(wrap, ch);
           wrap.appendChild(inner);
 
           const firstOrig = ch.cloneNode(true);
-          Object.assign(firstOrig.style, { display: 'inline-block', width: w + 'px', textAlign: 'center' });
+          Object.assign(firstOrig.style, {
+            display: "inline-block",
+            width: w + "px",
+            textAlign: "center",
+          });
 
-          ch.setAttribute('data-orig', '1');
-          Object.assign(ch.style, { display: 'inline-block', width: w + 'px', textAlign: 'center' });
+          ch.setAttribute("data-orig", "1");
+          Object.assign(ch.style, {
+            display: "inline-block",
+            width: w + "px",
+            textAlign: "center",
+          });
 
           inner.appendChild(firstOrig);
           for (let k = 0; k < rolls; k++) {
             const c = ch.cloneNode(true);
             if (scrambleCharset) c.textContent = rand(scrambleCharset);
-            Object.assign(c.style, { display: 'inline-block', width: w + 'px', textAlign: 'center' });
+            Object.assign(c.style, {
+              display: "inline-block",
+              width: w + "px",
+              textAlign: "center",
+            });
             inner.appendChild(c);
           }
           inner.appendChild(ch);
@@ -156,7 +178,7 @@ const Shuffle = ({
           const steps = rolls + 1;
           let startX = 0;
           let finalX = -steps * w; // default: slide left to reveal
-          if (shuffleDirection === 'right') {
+          if (shuffleDirection === "right") {
             const firstCopy = inner.firstElementChild;
             const real = inner.lastElementChild;
             if (real) inner.insertBefore(real, inner.firstChild);
@@ -168,36 +190,38 @@ const Shuffle = ({
           gsap.set(inner, { x: startX, force3D: true });
           if (colorFrom) inner.style.color = colorFrom;
 
-          inner.setAttribute('data-final-x', String(finalX));
-          inner.setAttribute('data-start-x', String(startX));
+          inner.setAttribute("data-final-x", String(finalX));
+          inner.setAttribute("data-start-x", String(startX));
 
           wrappersRef.current.push(wrap);
         });
       };
 
-      const inners = () => wrappersRef.current.map(w => w.firstElementChild);
+      const inners = () => wrappersRef.current.map((w) => w.firstElementChild);
 
       const randomizeScrambles = () => {
         if (!scrambleCharset) return;
-        wrappersRef.current.forEach(w => {
+        wrappersRef.current.forEach((w) => {
           const strip = w.firstElementChild;
           if (!strip) return;
           const kids = Array.from(strip.children);
           for (let i = 1; i < kids.length - 1; i++) {
-            kids[i].textContent = scrambleCharset.charAt(Math.floor(Math.random() * scrambleCharset.length));
+            kids[i].textContent = scrambleCharset.charAt(
+              Math.floor(Math.random() * scrambleCharset.length)
+            );
           }
         });
       };
 
       const cleanupToStill = () => {
-        wrappersRef.current.forEach(w => {
+        wrappersRef.current.forEach((w) => {
           const strip = w.firstElementChild;
           if (!strip) return;
           const real = strip.querySelector('[data-orig="1"]');
           if (!real) return;
           strip.replaceChildren(real);
-          strip.style.transform = 'none';
-          strip.style.willChange = 'auto';
+          strip.style.transform = "none";
+          strip.style.willChange = "auto";
         });
       };
 
@@ -213,7 +237,9 @@ const Shuffle = ({
           repeatDelay: loop ? loopDelay : 0,
           onRepeat: () => {
             if (scrambleCharset) randomizeScrambles();
-            gsap.set(strips, { x: (i, t) => parseFloat(t.getAttribute('data-start-x') || '0') });
+            gsap.set(strips, {
+              x: (i, t) => parseFloat(t.getAttribute("data-start-x") || "0"),
+            });
             onShuffleComplete?.();
           },
           onComplete: () => {
@@ -224,18 +250,18 @@ const Shuffle = ({
               onShuffleComplete?.();
               armHover();
             }
-          }
+          },
         });
 
         const addTween = (targets, at) => {
           tl.to(
             targets,
             {
-              x: (i, t) => parseFloat(t.getAttribute('data-final-x') || '0'),
+              x: (i, t) => parseFloat(t.getAttribute("data-final-x") || "0"),
               duration,
               ease,
               force3D: true,
-              stagger: animationMode === 'evenodd' ? stagger : 0
+              stagger: animationMode === "evenodd" ? stagger : 0,
             },
             at
           );
@@ -244,7 +270,7 @@ const Shuffle = ({
           }
         };
 
-        if (animationMode === 'evenodd') {
+        if (animationMode === "evenodd") {
           const odd = strips.filter((_, i) => i % 2 === 1);
           const even = strips.filter((_, i) => i % 2 === 0);
           const oddTotal = duration + Math.max(0, odd.length - 1) * stagger;
@@ -252,19 +278,25 @@ const Shuffle = ({
           if (odd.length) addTween(odd, 0);
           if (even.length) addTween(even, evenStart);
         } else {
-          strips.forEach(strip => {
+          strips.forEach((strip) => {
             const d = Math.random() * maxDelay;
             tl.to(
               strip,
               {
-                x: parseFloat(strip.getAttribute('data-final-x') || '0'),
+                x: parseFloat(strip.getAttribute("data-final-x") || "0"),
                 duration,
                 ease,
-                force3D: true
+                force3D: true,
               },
               d
             );
-            if (colorFrom && colorTo) tl.fromTo(strip, { color: colorFrom }, { color: colorTo, duration, ease }, d);
+            if (colorFrom && colorTo)
+              tl.fromTo(
+                strip,
+                { color: colorFrom },
+                { color: colorTo, duration, ease },
+                d
+              );
           });
         }
 
@@ -281,7 +313,7 @@ const Shuffle = ({
           play();
         };
         hoverHandlerRef.current = handler;
-        ref.current.addEventListener('mouseenter', handler);
+        ref.current.addEventListener("mouseenter", handler);
       };
 
       const create = () => {
@@ -296,7 +328,7 @@ const Shuffle = ({
         trigger: el,
         start,
         once: triggerOnce,
-        onEnter: create
+        onEnter: create,
       });
 
       return () => {
@@ -326,16 +358,20 @@ const Shuffle = ({
         colorTo,
         triggerOnce,
         respectReducedMotion,
-        triggerOnHover
+        triggerOnHover,
       ],
-      scope: ref
+      scope: ref,
     }
   );
 
   const commonStyle = { textAlign, ...style };
-  const classes = `shuffle-parent ${ready ? 'is-ready' : ''} ${className}`;
-  const Tag = tag || 'p';
-  return React.createElement(Tag, { ref, className: classes, style: commonStyle }, text);
+  const classes = `shuffle-parent ${ready ? "is-ready" : ""} ${className}`;
+  const Tag = tag || "p";
+  return React.createElement(
+    Tag,
+    { ref, className: classes, style: commonStyle },
+    text
+  );
 };
 
 export default Shuffle;
