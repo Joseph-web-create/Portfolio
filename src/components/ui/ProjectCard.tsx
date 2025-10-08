@@ -54,7 +54,7 @@ const ProjectCard = ({
       <div className="flex gap-4 ">
         {tectStacks.map((item) => (
           <div key={item} className="bg-[#272626] px-3 py-1 rounded-2xl">
-            <p className="text-white/70 text-[12px] lg:text-[14px] shiny-text">
+            <p className="text-white/70 text-[10px] lg:text-[14px] shiny-text">
               {item}
             </p>
           </div>

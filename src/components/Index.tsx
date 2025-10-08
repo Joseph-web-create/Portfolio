@@ -3,8 +3,9 @@ import Nav from "./ui/Nav";
 import Hero from "./ui/Hero";
 import About from "./ui/About";
 import Services from "./ui/Services";
-import Orb from "./ui/Orb";
 import Project from "./ui/Project";
+import Orb from "./ui/Orb";
+import Form from "./ui/Form";
 
 const Index = () => {
   return (
@@ -32,6 +33,8 @@ const Index = () => {
                 <Project />
                 <Services />
               </div>
+
+              <Form />
             </ClickSpark>
           </div>
         </div>
