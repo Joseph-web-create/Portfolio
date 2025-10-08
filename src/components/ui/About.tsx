@@ -68,7 +68,7 @@ const About = () => {
         whileInView="visible"
         variants={variants}
       >
-        <h3 className="text-white text-center text-4xl lg:text-5xl font-bold">
+        <h3 className="text-white text-center text-4xl lg:text-5xl font-bold ">
           Skills
         </h3>
         <LoopLogo />

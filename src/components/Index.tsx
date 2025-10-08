@@ -33,7 +33,6 @@ const Index = () => {
                 <Project />
                 <Services />
               </div>
-
               <Form />
             </ClickSpark>
           </div>
