@@ -18,7 +18,7 @@ const ProjectCard = ({
   list,
   tectStacks,
   link,
-  date,
+
   codeLink,
 }: {
   Icon: ElementType;
@@ -27,7 +27,6 @@ const ProjectCard = ({
   list: string[];
   tectStacks: string[];
   link: string;
-  date: string;
   codeLink?: string;
 }) => {
   return (
@@ -44,7 +43,6 @@ const ProjectCard = ({
             {title}
           </h3>
           <p className="text-white/80 text-[14px] lg:text-[16px]">{role}</p>
-          <p className="text-white/50 text-[13px]">{date}</p>
         </div>
       </div>
 

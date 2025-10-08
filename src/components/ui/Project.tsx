@@ -23,7 +23,6 @@ const Project = () => {
             ]}
             tectStacks={["React", "Express js", "Node js", "MongoDB"]}
             link="https://instagram-clone-mu-ten.vercel.app/auth/login"
-            date="Feb 2025 – May 2025"
             codeLink="https://github.com/Joseph-web-create/Instagram-clone"
           />
           <ProjectCard
@@ -36,7 +35,6 @@ const Project = () => {
             ]}
             tectStacks={["React", "API Integration", "Google OAuth"]}
             link="https://www.neumock.com/"
-            date="Sep 2025 – Present"
           />
           <ProjectCard
             Icon={BH}
@@ -48,7 +46,6 @@ const Project = () => {
             ]}
             tectStacks={["React", "TailwindCSS", "API Integration"]}
             link="https://tsa-internship-task-3.vercel.app/"
-            date="Jun 2025 – Jul 2025"
           />
         </div>
       </AppWrapper>
