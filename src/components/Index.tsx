@@ -8,6 +8,7 @@ import Orb from "./ui/Orb";
 import Form from "./ui/Form";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Toaster } from "sonner";
+import Footer from "./ui/Footer";
 
 const Index = () => {
   return (
@@ -37,6 +38,7 @@ const Index = () => {
                 <Services />
               </div>
               <Form />
+              <Footer />
             </ClickSpark>
           </div>
         </div>
