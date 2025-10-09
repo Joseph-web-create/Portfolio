@@ -2,6 +2,8 @@ import { motion } from "motion/react";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import axiosInstance from "@/utils/axiosInstance";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   name: z.string().min(4, "Your name must be more than 4 letters").trim(),
@@ -18,13 +20,27 @@ const Form = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = (data: FormData) => {
-    console.log(data);
+  const onSubmit = async (data: FormData) => {
+    try {
+      const response = await axiosInstance.post("/sendMails", data);
+
+      if (response.status === 200) {
+        toast("Got your message!", {
+          description: "I'll reach out to you soon.",
+        });
+        reset();
+      } else if (response.status === 400) {
+        toast.error(response.data.message);
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (

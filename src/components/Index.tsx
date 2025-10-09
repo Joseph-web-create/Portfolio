@@ -7,11 +7,13 @@ import Project from "./ui/Project";
 import Orb from "./ui/Orb";
 import Form from "./ui/Form";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Toaster } from "sonner";
 
 const Index = () => {
   return (
     <>
       <section className="bg-black relative h-[100vh] w-full">
+        <Toaster position="top-right" />
         <Orb
           hoverIntensity={0.5}
           rotateOnHover={true}
