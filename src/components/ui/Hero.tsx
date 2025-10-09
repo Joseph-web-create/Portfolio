@@ -55,10 +55,10 @@ function Hero() {
             ))}
           </div>
 
-          <div className="flex flex-col items-center gap-2">
+          <a href="#about" className="flex flex-col items-center gap-2">
             <p className="text-gray-400 writing-mode-vertical">Scroll down </p>
             <FaChevronDown color="gray" />
-          </div>
+          </a>
         </div>
 
         <div className="flex flex-col -mt-28 lg:-mt-5">
