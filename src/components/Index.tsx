@@ -6,6 +6,7 @@ import Services from "./ui/Services";
 import Project from "./ui/Project";
 import Orb from "./ui/Orb";
 import Form from "./ui/Form";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const Index = () => {
   return (
@@ -37,6 +38,7 @@ const Index = () => {
             </ClickSpark>
           </div>
         </div>
+        <SpeedInsights />
       </section>
     </>
   );
