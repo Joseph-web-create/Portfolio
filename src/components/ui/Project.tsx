@@ -2,6 +2,7 @@ import Instagram from "@/assets/instagram.svg?react";
 import ProjectCard from "./ProjectCard";
 import BH from "@/assets/BH.svg?react";
 import Neumock from "@/assets/neumock-logo.svg?react";
+import Event from "@/assets/event.svg?react";
 import AppWrapper from "./AppWrapper";
 
 const Project = () => {
@@ -35,6 +36,17 @@ const Project = () => {
             ]}
             tectStacks={["React", "API Integration", "Google OAuth"]}
             link="https://www.neumock.com/"
+          />
+          <ProjectCard
+            Icon={Event}
+            title="Current Project (API Integration & Authentication)"
+            role="Frontend Developer"
+            list={[
+              `Implemented secure authentication with Google sign-in and social login flows, handling token-based access and protected routes.`,
+              `Integrating backend APIs into the frontend, ensuring smooth data flow and responsive UI for core features.`,
+            ]}
+            tectStacks={["React", "API Integration", "Google OAuth"]}
+            link="https://eventra-teal.vercel.app/"
           />
           <ProjectCard
             Icon={BH}

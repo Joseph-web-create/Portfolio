@@ -17,7 +17,7 @@ const AppWrapper = ({ children, id }: { children: ReactNode; id: string }) => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
-      className="min-h-[50vh] grid gap-10 items-center px-4"
+      className="min-h-[70vh] grid gap-10 items-center px-4 py-20"
       id={id}
     >
       {children}
