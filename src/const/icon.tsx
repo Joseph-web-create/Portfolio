@@ -11,6 +11,7 @@ import {
   SiGithub,
   SiSwagger,
   SiPostman,
+  SiZod,
 } from "react-icons/si";
 
 export const techLogos = [
@@ -53,6 +54,10 @@ export const techLogos = [
   {
     node: <SiGithub color="#ffffff" />,
     title: "Github",
+  },
+  {
+    node: <SiZod color="#7C3AED" />,
+    title: "Zod",
   },
   {
     node: <SiSwagger color="#85EA2D" />,

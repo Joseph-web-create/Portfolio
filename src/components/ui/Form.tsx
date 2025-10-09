@@ -4,7 +4,7 @@ const Form = () => {
   return (
     <motion.section
       id="contact"
-      className="py-20 min-h-[50vh] flex flex-col gap-10 "
+      className="py-20 min-h-[50vh] flex flex-col gap-10 mt-20"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, ease: "easeIn" }}
