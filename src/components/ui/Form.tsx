@@ -35,7 +35,7 @@ const Form = () => {
       const response = await axiosInstance.post("/sendMails", data);
 
       if (response.status === 200) {
-        toast("Got your message!", {
+        toast.success("Got your message!", {
           description: "I'll reach out to you soon.",
         });
         reset();

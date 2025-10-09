@@ -13,7 +13,7 @@ const Index = () => {
   return (
     <>
       <section className="bg-black relative h-[100vh] w-full">
-        <Toaster position="top-right" />
+        <Toaster position="top-right" richColors />
         <Orb
           hoverIntensity={0.5}
           rotateOnHover={true}
