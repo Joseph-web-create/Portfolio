@@ -4,6 +4,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import axiosInstance from "@/utils/axiosInstance";
 import { toast } from "sonner";
+import FormLoader from "./FormLoader";
+import { useState } from "react";
 
 const formSchema = z.object({
   name: z.string().min(4, "Your name must be more than 4 letters").trim(),
@@ -17,6 +19,7 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 
 const Form = () => {
+  const [loader, setLoader] = useState(false);
   const {
     register,
     handleSubmit,
@@ -27,6 +30,7 @@ const Form = () => {
   });
 
   const onSubmit = async (data: FormData) => {
+    setLoader(true);
     try {
       const response = await axiosInstance.post("/sendMails", data);
 
@@ -37,9 +41,12 @@ const Form = () => {
         reset();
       } else if (response.status === 400) {
         toast.error(response.data.message);
+        setLoader(false);
       }
     } catch (error) {
       console.error(error);
+    } finally {
+      setLoader(false);
     }
   };
 
@@ -90,10 +97,11 @@ const Form = () => {
             )}
           </div>
           <button
-            className="bg-white rounded-lg px-2 py-2 font-bold cursor-pointer"
+            className="bg-white rounded-lg px-2 py-2 font-bold cursor-pointer relative"
             type="submit"
+            disabled={loader}
           >
-            Send message
+            {loader ? <FormLoader /> : "Send message"}
           </button>
         </div>
       </form>
