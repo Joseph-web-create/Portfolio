@@ -39,13 +39,18 @@ const Project = () => {
           />
           <ProjectCard
             Icon={Event}
-            title="Current Project (API Integration & Authentication)"
+            title="Eventra"
             role="Frontend Developer"
             list={[
-              `Implemented secure authentication with Google sign-in and social login flows, handling token-based access and protected routes.`,
-              `Integrating backend APIs into the frontend, ensuring smooth data flow and responsive UI for core features.`,
+              `Developed and styled key frontend components as part of a collaborative team project.`,
+              `Integrated APIs and built interactive UI elements to enhance user experience across devices.`,
             ]}
-            tectStacks={["React", "API Integration", "Google OAuth"]}
+            tectStacks={[
+              "React",
+              "TailwindCSS",
+              "API Integration",
+              "Git/GitHub",
+            ]}
             link="https://eventra-teal.vercel.app/"
           />
           <ProjectCard
