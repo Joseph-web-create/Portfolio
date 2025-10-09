@@ -12,6 +12,7 @@ import {
   SiSwagger,
   SiPostman,
   SiZod,
+  SiGit,
 } from "react-icons/si";
 
 export const techLogos = [
@@ -59,6 +60,7 @@ export const techLogos = [
     node: <SiZod color="#7C3AED" />,
     title: "Zod",
   },
+  { node: <SiGit color="#F05032" />, title: "Git" },
   {
     node: <SiSwagger color="#85EA2D" />,
     title: "Swagger UI",
