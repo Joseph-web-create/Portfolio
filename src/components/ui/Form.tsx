@@ -97,7 +97,7 @@ const Form = () => {
             )}
           </div>
           <button
-            className="bg-white rounded-lg px-2 py-2 font-bold cursor-pointer relative"
+            className="bg-white hover:bg-white/80 rounded-lg px-2 py-2 font-bold cursor-pointer relative"
             type="submit"
             disabled={loader}
           >
