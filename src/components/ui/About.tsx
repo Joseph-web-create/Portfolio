@@ -25,7 +25,7 @@ const containerVariants = {
 const About = () => {
   return (
     <motion.section
-      className="px-4 my-14 flex flex-col gap-30"
+      className="px-4 mt-14 flex flex-col gap-30"
       variants={containerVariants}
       viewport={{ once: true }}
       id="about"
