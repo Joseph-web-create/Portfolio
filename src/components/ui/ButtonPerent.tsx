@@ -5,7 +5,7 @@ const ButtonPerent = () => {
   return (
     <div className="flex mt-4 gap-4 ">
       <a
-        href="/JosephThankGod.pdf"
+        href="/Joseph.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className=" bg-[#ebebeb] hover:bg-[#e0e0e0d0] text-[#352f2f] py-2 flex px-4 items-center gap-2 rounded-xl font-bold text-[12px] lg:text-1xl"
