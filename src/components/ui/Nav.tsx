@@ -1,22 +1,31 @@
 import { MdMenu } from "react-icons/md";
 import Logo from "@/assets/layer.svg?react";
 import { useState } from "react";
+import { IoCloseCircle } from "react-icons/io5";
+import { motion } from "motion/react";
 
 function Nav() {
   const [shwoMenu, setShowMenu] = useState(false);
-  const close = () => {
-    setShowMenu((prev) => !prev);
-  };
+  const close = () => setShowMenu(false);
+  const open = () => setShowMenu(true);
+
   return (
     <>
       <div className="py-4  lg:hidden relative">
-        <MdMenu color="white" size={30} onClick={close} />
+        <div className="px-4">
+          <MdMenu color="white" size={30} onClick={open} />
+        </div>
         {shwoMenu && (
           <div
             className="bg-[#00000079] h-screen w-full absolute top-0 bottom-0 z-40"
             onClick={close}
           >
-            <div className="bg-black py-4 px-4 h-screen w-[70%]">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ ease: "easeIn" }}
+              className="bg-black py-6 px-4 h-screen w-[70%] flex justify-between"
+            >
               <div className="flex flex-col gap-4 shiny-text w-full">
                 <a href="#about" className="hover:text-white">
                   About
@@ -31,7 +40,10 @@ function Nav() {
                   Contact
                 </a>
               </div>
-            </div>
+              <div onClick={close}>
+                <IoCloseCircle className="text-white/80 text-2xl " />
+              </div>
+            </motion.div>
           </div>
         )}
       </div>
