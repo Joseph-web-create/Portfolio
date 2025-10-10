@@ -22,15 +22,15 @@ const Index = () => {
           forceHoverState={true}
         />
         <div className="bg-black/50 absolute top-0 bottom-0 h-[100vh] w-full">
-          <div className="container mx-auto">
-            <ClickSpark
-              sparkColor="#fff"
-              sparkSize={12}
-              sparkRadius={20}
-              sparkCount={8}
-              duration={400}
-            >
-              <Nav />
+          <ClickSpark
+            sparkColor="#fff"
+            sparkSize={12}
+            sparkRadius={20}
+            sparkCount={8}
+            duration={400}
+          >
+            <Nav />
+            <div className="container mx-auto">
               <Hero />
               <About />
               <div className="flex flex-col gap-26">
@@ -39,8 +39,8 @@ const Index = () => {
               </div>
               <Form />
               <Footer />
-            </ClickSpark>
-          </div>
+            </div>
+          </ClickSpark>
         </div>
         <SpeedInsights />
       </section>
