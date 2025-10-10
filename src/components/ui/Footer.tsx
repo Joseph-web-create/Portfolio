@@ -25,7 +25,7 @@ export default function Footer() {
       <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-white/70 to-transparent" />
 
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-3 px-6 py-6 sm:flex-row">
-        <p className="text-sm">© {year} Joseph Create</p>
+        <p className="text-sm">© {year} Joseph ^_~</p>
 
         <div className="flex items-center gap-5 text-base">
           {links.map((item) => (
