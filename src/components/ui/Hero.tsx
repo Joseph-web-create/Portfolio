@@ -1,4 +1,4 @@
-import image from "@/assets/img.png";
+import image from "@/assets/hero.webp";
 import { VscGithubInverted } from "react-icons/vsc";
 import { FaLinkedin } from "react-icons/fa6";
 import { BsTwitterX } from "react-icons/bs";
@@ -30,7 +30,7 @@ function Hero() {
   return (
     <motion.section className="h-[95vh] flex justify-between items-center px-4">
       <motion.div
-        initial={{ opacity: 0, x: -100 }}
+        initial={{ opacity: 0, x: -50 }}
         whileInView={{
           opacity: 1,
           x: 0,
@@ -101,14 +101,18 @@ function Hero() {
           </div>
         </div>
       </motion.div>
-
       <motion.img
-        initial={{ opacity: 0, x: 100 }}
+        initial={{ opacity: 0, x: 50 }}
         whileInView={{
           opacity: 1,
           x: 0,
         }}
-        transition={{ type: "spring", stiffness: 60, damping: 12, delay: 0.4 }}
+        transition={{
+          type: "spring",
+          stiffness: 60,
+          damping: 12,
+          // delay: 0.4,
+        }}
         src={image}
         alt="Joseph"
         className="w-[40%] object-cover hidden lg:block"
