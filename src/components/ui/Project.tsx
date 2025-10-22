@@ -19,7 +19,7 @@ const Project = () => {
             title="InstaShots — Social Media Platform"
             role="Fullstack Developer"
             list={[
-              `Engineered a full-stack social media SaaS where users can share posts, engage through comments, and manage profiles with secure authentication and media handling.`,
+              `Engineered a full-stack social media App where users can share posts, engage through comments, and manage profiles with secure authentication and media handling.`,
               `Implemented scalable REST APIs with Express.js and MongoDB, integrated Cloudinary for image hosting, and optimized feed rendering for performance.`,
               `Deployed and tested with 100+ early users to analyze engagement metrics and improve retention flow.`,
             ]}
